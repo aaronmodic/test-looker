@@ -1,6 +1,7 @@
 #project_name: "aaron_test_project"
 
 application: workflow_test {
+  label: "Aaron Test"
   file: "Test.js"
 }
 
