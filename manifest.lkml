@@ -1,6 +1,6 @@
 #project_name: "aaron_test_project"
 
-application: aaron_test {
+application: workflow_test {
   file: "Test.js"
 }
 
