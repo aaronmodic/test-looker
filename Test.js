@@ -1,1 +1,3 @@
-This is a test!
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Test");
+})
