@@ -1,4 +1,4 @@
-project_name: "aaron_test_project"
+#project_name: "aaron_test_project"
 
 application: aaron_test {
   file: "Test.js"
