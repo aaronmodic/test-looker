@@ -2,7 +2,8 @@
 
 application: workflow_test {
   label: "Aaron Test"
-  file: "Test.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "Test.js"
   entitlements: {
     local_storage: yes
     navigation: yes
