@@ -1,4 +1,4 @@
-#project_name: "aaron_test_project"
+project_name: "aaron_test"
 
 application: play_q_test {
   label: "Play Q Test"
