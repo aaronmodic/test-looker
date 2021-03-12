@@ -1,9 +1,9 @@
 #project_name: "aaron_test_project"
 
 application: workflow_test {
-  label: "Aaron Test"
-  #url: "http://localhost:8080/bundle.js"
-  file: "dev-playq-bundle.js"
+  label: "Play Q Test"
+  url: "http://localhost:8080/bundle.js"
+  #file: "dev-playq-bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
