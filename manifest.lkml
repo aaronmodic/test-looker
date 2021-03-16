@@ -8,8 +8,8 @@ application: play_q_test {
     local_storage: yes
     navigation: yes
     new_window: yes
-    allow_forms: yes
-    allow_same_origin: yes
+    use_form_submit: yes
+    use_embeds: yes
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
