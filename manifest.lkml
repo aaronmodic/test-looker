@@ -13,7 +13,7 @@ application: play_q_test {
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard"]
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io"]
   }
