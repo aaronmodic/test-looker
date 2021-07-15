@@ -36,6 +36,14 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.ORDER_ID ;;
+    action: {
+      label: "Send to BigQuery"
+      url: "https://hooks.zapier.com/hooks/catch/10435599/b35dzls/"
+      param: {
+        name: "order_id"
+        value: "{{value}}"
+      }
+    }
   }
 
   dimension: order_items_qty {
