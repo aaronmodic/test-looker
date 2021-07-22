@@ -10,6 +10,7 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
+
   }
 
   dimension: customer_state {
@@ -43,6 +44,10 @@ view: orders {
         name: "order_id"
         value: "{{value}}"
       }
+    }
+    link: {
+      label: "Dashboards"
+      url: "https://bytecodeef.looker.com/dashboards-next/91"
     }
   }
 
