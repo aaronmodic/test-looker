@@ -56,10 +56,7 @@ view: orders {
         name: "email"
         value: "{{ users_email_address._rendered_value }}"
       }
-      param: {
-        name: "filters"
-        value: "Product+Category+Name= {{product_category_name_translation.product_category_name_english._value}}"
-      }
+
     }
     link: {
       label: "Dashboards"
