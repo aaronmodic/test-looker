@@ -45,11 +45,28 @@ view: orders {
         value: "{{value}}"
       }
     }
+    action: {
+      label: "Action Hub Test"
+      url: "https://a65217tgmh.execute-api.us-west-2.amazonaws.com/dev"
+      param: {
+        name: "slug"
+        value: "ST3ubtHKIgUqyVUJJchhQr"
+      }
+      param: {
+        name: "email"
+        value: "{{ users_email_address._rendered_value }}"
+      }
+      param: {
+        name: "filters"
+        value: "Product+Category+Name= {{product_category_name_translation.product_category_name_english._value}}"
+      }
+    }
     link: {
       label: "Dashboards"
       url: "https://bytecodeef.looker.com/dashboards-next/91"
-    }
+      }
   }
+
 
   dimension: order_items_qty {
     type: number
