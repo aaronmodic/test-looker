@@ -52,11 +52,6 @@ view: orders {
         name: "slug"
         value: "ST3ubtHKIgUqyVUJJchhQr"
       }
-      param: {
-        name: "email"
-        value: "{{ users_email_address._rendered_value }}"
-      }
-
     }
     link: {
       label: "Dashboards"
