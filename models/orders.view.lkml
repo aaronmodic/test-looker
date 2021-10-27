@@ -138,6 +138,14 @@ view: orders {
   measure: count_orders {
     type: count_distinct
     sql: ${order_id} ;;
+    link: {
+      label: "Link 1"
+      url: "/dashboards-next/306"
+    }
+    link: {
+      label: "Link 2"
+      url: "/dashboards-next/112"
+    }
   }
 
   measure: count_customers {
