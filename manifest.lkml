@@ -21,8 +21,8 @@ application: framework_app_test {
 
 application: framework_app_cisco {
   label: "Cisco Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "cisco_bundle.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "cisco_bundle.js"
   #url: "https://looker-bundle-bucket.s3.amazonaws.com/bundle.js"
   entitlements: {
     local_storage: yes
@@ -71,7 +71,7 @@ application: framework_app_paypal {
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes"]
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "lookml_model"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
   }
