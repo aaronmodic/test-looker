@@ -10,6 +10,7 @@ view: users {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
+    tags: ["dimensions:Sender Dimension"]
   }
 
   dimension: customer_state {
@@ -36,6 +37,7 @@ view: users {
     type: string
     # hidden: yes
     sql: ${TABLE}.ORDER_ID ;;
+    tags: ["dimensions:Sender Dimension"]
   }
 
   dimension: order_items_qty {

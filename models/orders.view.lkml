@@ -10,7 +10,7 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
-
+  tags: ["dimensions:Sender Dimension"]
   }
 
   dimension: customer_state {
@@ -37,6 +37,7 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.ORDER_ID ;;
+    tags: ["dimensions:Sender Dimension"]
     action: {
       label: "Send to BigQuery"
       url: "https://hooks.zapier.com/hooks/catch/10435599/b35dzls/"
