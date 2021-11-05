@@ -152,5 +152,6 @@ view: orders {
   measure: count_customers {
     type: count_distinct
     sql: ${customer_id} ;;
+    tags: ["measures:measure"]
   }
 }
