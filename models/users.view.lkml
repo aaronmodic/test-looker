@@ -132,4 +132,13 @@ view: users {
     type: count_distinct
     sql: ${customer_id} ;;
   }
+
+  dimension_group: auditdate {
+    type: time
+    timeframes: [
+      raw,
+      date
+    ]
+    sql: ${TABLE}.auditdate ;;
+  }
 }
