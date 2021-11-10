@@ -21,8 +21,8 @@ application: framework_app_test {
 
 application: framework_app_cisco {
   label: "Cisco Framework"
-  url: "http://localhost:8080/bundle.js"
-  #file: "cisco_bundle.js"
+  #url: "http://localhost:8080/bundle.js"
+  file: "cisco_bundle.js"
   #url: "https://looker-bundle-bucket.s3.amazonaws.com/bundle.js"
   entitlements: {
     local_storage: yes

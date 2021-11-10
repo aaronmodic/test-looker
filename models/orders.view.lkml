@@ -23,9 +23,19 @@ view: orders {
     sql: ${TABLE}.CUSTOMER_ZIP_CODE_PREFIX ;;
   }
 
-
-
-
+  dimension_group: order_purchase {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
+  }
 
 
   dimension: order_freight_value {
