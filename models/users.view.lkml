@@ -140,6 +140,6 @@ view: users {
       date
     ]
     sql: ${TABLE}.auditdate ;;
-    tags: ["dimensions:Timeframes"]
+    tags: ["timeframes:Timeframe"]
   }
 }

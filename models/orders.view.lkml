@@ -162,5 +162,6 @@ view: orders {
       date
     ]
     sql: ${TABLE}.auditdate ;;
+    tags: ["timeframes:Timeframe"]
   }
 }
