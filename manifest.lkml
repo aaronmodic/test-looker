@@ -60,8 +60,8 @@ application: framework_app_vibes {
 
 application: framework_app_paypal {
   label: "Paypal Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "paypal_bundle.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "paypal_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -71,7 +71,7 @@ application: framework_app_paypal {
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "lookml_model","create_query"]
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "lookml_model","create_query","all_roles"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
   }

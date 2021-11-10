@@ -162,5 +162,16 @@ view: orders {
   measure: count_customers {
     type: count_distinct
     sql: ${customer_id} ;;
+    tags: ["measures:measure"]
+  }
+
+  dimension_group: auditdate {
+    type: time
+    timeframes: [
+      raw,
+      date
+    ]
+    sql: ${TABLE}.auditdate ;;
+    tags: ["timeframes:Timeframe"]
   }
 }
