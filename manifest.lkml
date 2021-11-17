@@ -77,6 +77,46 @@ application: framework_app_paypal {
   }
 }
 
+application: manhattan_admin_app {
+  label: "Manhattan - Admin App"
+  url: "http://localhost:8080/bundle.js"
+  #file: "bundle.js"
+  entitlements: {
+    local_storage: yes
+    navigation: yes
+    new_window: yes
+    use_form_submit: yes
+    use_embeds: yes
+    core_api_methods: ["all_connections","all_projects","all_groups"
+      , "all_users", "all_folders"
+      , "search_folders", "run_inline_query", "me"
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"]
+    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
+    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
+  }
+}
+
+application: manhattan_framework_app {
+  label: "Manhattan - App"
+  #url: "http://localhost:8080/bundle.js"
+  file: "/manhattan/bundle.js"
+  entitlements: {
+    local_storage: yes
+    navigation: yes
+    new_window: yes
+    use_form_submit: yes
+    use_embeds: yes
+    use_iframes: yes
+    core_api_methods: ["all_connections","all_projects","all_groups"
+      , "all_users", "all_folders"
+      , "search_folders", "run_inline_query", "me"
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+      ,"folder_dashboards","user","all_roles"]
+    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
+    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
+  }
+}
+
 # # Use local_dependency: To enable referencing of another project
 # # on this instance with include: statements
 #

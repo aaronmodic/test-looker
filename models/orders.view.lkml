@@ -35,6 +35,7 @@ view: orders {
       year
     ]
     sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
+    tags: ["timeframes:Timeframe"]
   }
 
 
