@@ -10,12 +10,13 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
-  tags: ["dimensions:Sender Dimension"]
+  tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
   dimension: customer_state {
     type: string
     sql: ${TABLE}.CUSTOMER_STATE ;;
+    tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
   dimension: customer_zip_code_prefix {

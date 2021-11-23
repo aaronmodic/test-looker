@@ -79,8 +79,8 @@ application: framework_app_paypal {
 
 application: manhattan_admin_app {
   label: "Manhattan - Admin App"
-  #url: "http://localhost:8080/bundle.js"
-  file: "/manhattan/admin-bundle.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "/manhattan/admin-bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -90,7 +90,8 @@ application: manhattan_admin_app {
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"]
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+      ,"login","logout"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
   }
@@ -99,7 +100,7 @@ application: manhattan_admin_app {
 application: manhattan_framework_app {
   label: "Manhattan - App"
   #url: "http://localhost:8080/bundle.js"
-  file: "/manhattan/bundle.js"
+  file: "/manhattan/ma-bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
