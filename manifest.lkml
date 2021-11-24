@@ -79,8 +79,8 @@ application: framework_app_paypal {
 
 application: manhattan_admin_app {
   label: "Manhattan - Admin App"
-  url: "http://localhost:8080/bundle.js"
-  #file: "/manhattan/admin-bundle.js"
+  #url: "http://localhost:8080/bundle.js"
+  file: "/manhattan/admin-bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
