@@ -91,9 +91,9 @@ application: manhattan_admin_app {
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
-      ,"login","logout"]
-    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
-    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
+      ,"login","logout","all_roles"]
+    oauth2_urls: ["https://*.looker.com"]
+    external_api_urls: ["https://*.looker.com"]
   }
 }
 
@@ -113,8 +113,8 @@ application: manhattan_framework_app {
       , "search_folders", "run_inline_query", "me"
       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
       ,"folder_dashboards","user","all_roles"]
-    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
-    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
+    oauth2_urls: ["https://*.looker.com"]
+    external_api_urls: ["https://*.looker.com"]
   }
 }
 

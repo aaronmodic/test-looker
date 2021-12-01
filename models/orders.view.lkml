@@ -93,6 +93,7 @@ view: orders {
   dimension: order_status {
     type: string
     sql: ${TABLE}.ORDER_STATUS ;;
+    tags:["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
 # use translated name in product_category_name_translation view
