@@ -10,12 +10,13 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
-
+  tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
   dimension: customer_state {
     type: string
     sql: ${TABLE}.CUSTOMER_STATE ;;
+    tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
   dimension: customer_zip_code_prefix {
@@ -23,9 +24,20 @@ view: orders {
     sql: ${TABLE}.CUSTOMER_ZIP_CODE_PREFIX ;;
   }
 
-
-
-
+  dimension_group: order_purchase {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
+    tags: ["timeframes:Timeframe"]
+  }
 
 
   dimension: order_freight_value {
@@ -37,6 +49,7 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.ORDER_ID ;;
+    tags: ["dimensions:Sender Dimension"]
     action: {
       label: "Send to BigQuery"
       url: "https://hooks.zapier.com/hooks/catch/10435599/b35dzls/"
@@ -80,6 +93,7 @@ view: orders {
   dimension: order_status {
     type: string
     sql: ${TABLE}.ORDER_STATUS ;;
+    tags:["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
 # use translated name in product_category_name_translation view
@@ -151,5 +165,16 @@ view: orders {
   measure: count_customers {
     type: count_distinct
     sql: ${customer_id} ;;
+    tags: ["measures:measure"]
+  }
+
+  dimension_group: auditdate {
+    type: time
+    timeframes: [
+      raw,
+      date
+    ]
+    sql: ${TABLE}.auditdate ;;
+    tags: ["timeframes:Timeframe"]
   }
 }

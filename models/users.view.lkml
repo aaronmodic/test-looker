@@ -10,6 +10,7 @@ view: users {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
+    tags: ["dimensions:Sender Dimension"]
   }
 
   dimension: customer_state {
@@ -22,6 +23,20 @@ view: users {
     sql: ${TABLE}.CUSTOMER_ZIP_CODE_PREFIX ;;
   }
 
+  dimension_group: order_purchase {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
+    tags: ["timeframes:Timeframe"]
+  }
 
 
 
@@ -36,6 +51,7 @@ view: users {
     type: string
     # hidden: yes
     sql: ${TABLE}.ORDER_ID ;;
+    tags: ["dimensions:Sender Dimension"]
   }
 
   dimension: order_items_qty {
@@ -129,5 +145,15 @@ view: users {
   measure: count_customers {
     type: count_distinct
     sql: ${customer_id} ;;
+  }
+
+  dimension_group: auditdate {
+    type: time
+    timeframes: [
+      raw,
+      date
+    ]
+    sql: ${TABLE}.auditdate ;;
+    tags: ["timeframes:Timeframe"]
   }
 }
