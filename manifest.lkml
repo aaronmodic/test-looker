@@ -13,7 +13,7 @@ application: framework_app_test {
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes"]
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "create_query", "all_roles"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
   }
@@ -52,7 +52,9 @@ application: framework_app_vibes {
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "folder_looks","dashboard_dashboard_elements","look","folder_dashboards", "all_roles"]
+      , "lookml_model_explore", "all_lookml_models",
+      "search_dashboard_elements", "run_query", "dashboard","all_user_attributes",
+      "folder_looks","dashboard_dashboard_elements","look","folder_dashboards", "create_query", "all_roles"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
   }
@@ -60,18 +62,20 @@ application: framework_app_vibes {
 
 application: framework_app_paypal {
   label: "Paypal Framework"
-  url: "http://localhost:8080/bundle.js"
-  #file: "bundle.js"
+  #url: "http://localhost:8080/bundle.js"
+  file: "paypal_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
     new_window: yes
     use_form_submit: yes
+    use_iframes:  yes
     use_embeds: yes
     core_api_methods: ["all_connections","all_projects","all_groups"
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes"]
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes"
+      , "create_query", "all_roles"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
   }
