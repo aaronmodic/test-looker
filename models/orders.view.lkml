@@ -10,12 +10,13 @@ view: orders {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
-  tags: ["dimensions:Sender Dimension"]
+  tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
   dimension: customer_state {
     type: string
     sql: ${TABLE}.CUSTOMER_STATE ;;
+    tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
   dimension: customer_zip_code_prefix {
@@ -35,6 +36,7 @@ view: orders {
       year
     ]
     sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
+    tags: ["timeframes:Timeframe"]
   }
 
 
@@ -91,6 +93,7 @@ view: orders {
   dimension: order_status {
     type: string
     sql: ${TABLE}.ORDER_STATUS ;;
+    tags:["dimensions:Sender Dimension","filter:Sender Filter"]
   }
 
 # use translated name in product_category_name_translation view
