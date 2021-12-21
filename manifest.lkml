@@ -63,7 +63,7 @@ application: framework_app_vibes {
 application: framework_app_paypal {
   label: "Paypal Framework"
   #url: "http://localhost:8080/bundle.js"
-  file: "bundle.js"
+  file: "paypal_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
