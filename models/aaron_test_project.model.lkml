@@ -2,7 +2,7 @@ connection: "bytecode_postgres"
 
 include: "/models/orders.view"
 include: "/models/users.view"
-
+# include: "/_period_comparison.view.lkml"
 # include all the views
 explore: orders {
   view_label: "Orders"
@@ -15,3 +15,4 @@ explore: users {
   view_name: users
   label: "Ecommerce Dataset - Users"
 }
+# explore: _period_comparison {}

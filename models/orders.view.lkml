@@ -1,6 +1,11 @@
 view: orders {
   sql_table_name: PUBLIC.ORDERS ;;
 
+# dimension: prim_key {
+#   type: string
+#   primary_key: yes
+#   sql:  ${order_id} || ${review_answer_timestamp} || ${order_freight_value} || ${product_photos_qty} || ${product_name_lenght} || ${product_description_length} ;;
+# }
   dimension: customer_city {
     type: string
     sql: ${TABLE}.CUSTOMER_CITY ;;
@@ -124,7 +129,10 @@ view: orders {
   }
 
 
-
+dimension: review_answer_timestamp {
+  type: string
+  sql: ${TABLE}.review_answer_timestamp ;;
+}
   dimension: review_comment_message {
     type: string
     sql: ${TABLE}.REVIEW_COMMENT_MESSAGE ;;
@@ -146,7 +154,22 @@ view: orders {
     type: number
     sql: ${TABLE}.REVIEW_SCORE ;;
   }
+  parameter: dimension_selector {
+    type: string
+    allowed_value: {value:"order_id"}
+    allowed_value: {value:"customer_id"}
+  }
+  dimension: current_period_dimension{
+    type: string
+    label_from_parameter: dimension_selector
+    sql: case
+    when {% parameter dimension_selector %} = 'order_id' then ${order_id}
+    when {% parameter dimension_selector %} = 'customer_id' then ${customer_id}
+    else null
+    end
 
+    ;;
+  }
 ### Measures ###
 
   measure: count_orders {
@@ -176,5 +199,36 @@ view: orders {
     ]
     sql: ${TABLE}.auditdate ;;
     tags: ["timeframes:Timeframe"]
+  }
+
+  measure: count_order_items_qty {
+    type: sum
+    sql: ${order_items_qty};;
+  }
+
+  measure: sum_order_products_value {
+    type: sum
+    sql: ${order_products_value};;
+  }
+  parameter: measure_selector {
+    type: unquoted
+    allowed_value: {
+      value: "sum_order_products_value"
+    }
+    allowed_value: {
+      value: "count_customers"
+    }
+  }
+
+  measure: current_period_measure {
+    type: number
+    sql:
+      {% if measure_selector._parameter_value == 'sum_order_products_value' %}
+        ${sum_order_products_value}
+      {% elsif measure_selector._parameter_value == 'count_customers' %}
+        ${count_customers}
+      {% else %}
+        event
+      {% endif %} ;;
   }
 }
