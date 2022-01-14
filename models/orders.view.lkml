@@ -1,4 +1,7 @@
+include: "/models/base_parameters.view.lkml"
 view: orders {
+
+  extends: [base_parameters]
   sql_table_name: PUBLIC.ORDERS ;;
 
 # dimension: prim_key {
@@ -154,11 +157,11 @@ dimension: review_answer_timestamp {
     type: number
     sql: ${TABLE}.REVIEW_SCORE ;;
   }
-  parameter: dimension_selector {
-    type: string
-    allowed_value: {value:"order_id"}
-    allowed_value: {value:"customer_id"}
-  }
+  # parameter: dimension_selector {
+  #   type: string
+  #   allowed_value: {value:"order_id"}
+  #   allowed_value: {value:"customer_id"}
+  # }
   dimension: current_period_dimension{
     type: string
     label_from_parameter: dimension_selector
@@ -210,15 +213,15 @@ dimension: review_answer_timestamp {
     type: sum
     sql: ${order_products_value};;
   }
-  parameter: measure_selector {
-    type: unquoted
-    allowed_value: {
-      value: "sum_order_products_value"
-    }
-    allowed_value: {
-      value: "count_customers"
-    }
-  }
+  # parameter: measure_selector {
+  #   type: unquoted
+  #   allowed_value: {
+  #     value: "sum_order_products_value"
+  #   }
+  #   allowed_value: {
+  #     value: "count_customers"
+  #   }
+  # }
 
   measure: current_period_measure {
     type: number
