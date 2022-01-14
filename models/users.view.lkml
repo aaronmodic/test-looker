@@ -4,6 +4,7 @@ view: users {
   dimension: customer_city {
     type: string
     sql: ${TABLE}.CUSTOMER_CITY ;;
+    tags: ["market: "]
   }
 
   dimension: customer_id {
@@ -35,7 +36,7 @@ view: users {
       year
     ]
     sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
-    tags: ["timeframes:Timeframe"]
+    tags: ["timeframe: "]
   }
 
 
@@ -51,7 +52,7 @@ view: users {
     type: string
     # hidden: yes
     sql: ${TABLE}.ORDER_ID ;;
-    tags: ["dimensions:Sender Dimension"]
+    tags: ["dimensions:Sender Dimension","subMarket1: "]
   }
 
   dimension: order_items_qty {

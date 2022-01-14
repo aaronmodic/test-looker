@@ -2,8 +2,8 @@ project_name: "aaron_test"
 
 application: framework_app_test {
   label: "Framework App Test"
-  #url: "http://localhost:8080/bundle.js"
-  file: "bundle.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
