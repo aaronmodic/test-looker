@@ -41,8 +41,8 @@ application: framework_app_cisco {
 
 application: framework_app_vibes {
   label: "Vibes Framework"
-  url: "http://localhost:8080/bundle.js"
-  #file: "cisco-bundle.js"
+  #url: "http://localhost:8080/bundle.js"
+  file: "vibes_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -62,8 +62,8 @@ application: framework_app_vibes {
 
 application: framework_app_paypal {
   label: "Paypal Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "paypal_bundle.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "paypal_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
