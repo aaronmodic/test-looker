@@ -231,7 +231,7 @@ dimension: review_answer_timestamp {
       {% elsif measure_selector._parameter_value == 'count_customers' %}
         ${count_customers}
       {% else %}
-        event
+        null
       {% endif %} ;;
   }
 }

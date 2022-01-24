@@ -17,14 +17,14 @@ view: dt_test {
         #   field: orders.measure_selector
         #   value: "sum^_order^_products^_value"
         # }
-        filters: {
-          field: p2p.current_period_filter
-          value: "2018/01/01 to 2018/12/31"
-        }
-        filters: {
-          field: p2p.pop_comparison
-          value: "Previous Year"
-        }
+        # filters: {
+        #   field: p2p.current_period_filter
+        #   value: "2018/01/01 to 2018/12/31"
+        # }
+        # filters: {
+        #   field: p2p.pop_comparison
+        #   value: "Previous Year"
+        # }
 
         bind_filters: {
           from_field: dt_test.dimension_selector
