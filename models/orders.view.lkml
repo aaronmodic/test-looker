@@ -12,13 +12,14 @@ view: orders {
   dimension: customer_city {
     type: string
     sql: ${TABLE}.CUSTOMER_CITY ;;
+    tags: ["market: "]
   }
 
   dimension: customer_id {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
-  tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
+  tags: ["dimensions: "]
   }
 
   dimension: customer_state {

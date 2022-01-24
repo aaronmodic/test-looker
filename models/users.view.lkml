@@ -4,6 +4,7 @@ view: users {
   dimension: customer_city {
     type: string
     sql: ${TABLE}.CUSTOMER_CITY ;;
+    tags: ["subMarket2: ","market: "]
   }
 
   dimension: customer_id {
@@ -16,6 +17,7 @@ view: users {
   dimension: customer_state {
     type: string
     sql: ${TABLE}.CUSTOMER_STATE ;;
+    tags: ["subMarket2: "]
   }
 
   dimension: customer_zip_code_prefix {
@@ -35,7 +37,7 @@ view: users {
       year
     ]
     sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
-    tags: ["timeframes:Timeframe"]
+    tags: ["timeframe: "]
   }
 
 
@@ -51,7 +53,7 @@ view: users {
     type: string
     # hidden: yes
     sql: ${TABLE}.ORDER_ID ;;
-    tags: ["dimensions:Sender Dimension"]
+    tags: ["dimensions:Sender Dimension","subMarket1: "]
   }
 
   dimension: order_items_qty {
@@ -62,6 +64,7 @@ view: users {
   dimension: order_products_value {
     type: number
     sql: ${TABLE}.ORDER_PRODUCTS_VALUE ;;
+    tags: ["comparisonPoint: "]
   }
 
 
@@ -69,11 +72,13 @@ view: users {
   dimension: order_sellers_qty {
     type: number
     sql: ${TABLE}.ORDER_SELLERS_QTY ;;
+    tags: ["comparisonPoint: "]
   }
 
   dimension: order_status {
     type: string
     sql: ${TABLE}.ORDER_STATUS ;;
+    tags: ["comparisonPoint: "]
   }
 
 # use translated name in product_category_name_translation view
