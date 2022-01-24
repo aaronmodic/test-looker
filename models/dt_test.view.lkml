@@ -27,11 +27,11 @@ view: dt_test {
         # }
 
         bind_filters: {
-          from_field: dt_test.dimension_selector
+          from_field: orders.dimension_selector
           to_field: orders.dimension_selector
         }
         bind_filters: {
-          from_field: dt_test.measure_selector
+          from_field: orders.measure_selector
           to_field: orders.measure_selector
         }
       }

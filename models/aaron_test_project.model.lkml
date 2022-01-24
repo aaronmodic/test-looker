@@ -27,4 +27,3 @@ explore: users {
   view_name: users
   label: "Ecommerce Dataset - Users"
 }
- explore: dt_test {}
