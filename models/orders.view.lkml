@@ -213,6 +213,7 @@ dimension: review_answer_timestamp {
   measure: sum_order_products_value {
     type: sum
     sql: ${order_products_value};;
+    tags: ["measures:measure"]
   }
   # parameter: measure_selector {
   #   type: unquoted

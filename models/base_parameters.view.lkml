@@ -5,6 +5,7 @@ view: base_parameters {
     type: string
     allowed_value: {value:"order_id"}
     allowed_value: {value:"customer_id"}
+    allowed_value: {value:"order_status"}
   }
   parameter: measure_selector {
     type: unquoted
