@@ -169,6 +169,7 @@ dimension: review_answer_timestamp {
     sql: case
     when {% parameter dimension_selector %} = 'order_id' then ${order_id}
     when {% parameter dimension_selector %} = 'customer_id' then ${customer_id}
+     when {% parameter dimension_selector %} = 'order_status' then ${order_status}
     else null
     end
 
