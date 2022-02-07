@@ -118,6 +118,7 @@ view: users {
   dimension: review_comment_title {
     type: string
     sql: ${TABLE}.REVIEW_COMMENT_TITLE ;;
+    tags: ["dimensions:Executive Subsection"]
   }
 
 
@@ -125,11 +126,13 @@ view: users {
   dimension: review_id {
     type: string
     sql: ${TABLE}.REVIEW_ID ;;
+    tags: ["dimensions:Executive Subsection"]
   }
 
   dimension: review_score {
     type: number
     sql: ${TABLE}.REVIEW_SCORE ;;
+    tags: ["dimensions:Executive Subsection"]
   }
 
 ### Measures ###
@@ -145,11 +148,13 @@ view: users {
       label: "Link 2"
       url: "/dashboards-next/112"
     }
+    tags: ["measures:Executive Subsection"]
   }
 
   measure: count_customers {
     type: count_distinct
     sql: ${customer_id} ;;
+    tags: ["measures:Executive Subsection"]
   }
 
   dimension_group: auditdate {
