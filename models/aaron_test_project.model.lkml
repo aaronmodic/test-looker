@@ -9,17 +9,17 @@ include: "/models/dt_view_switcher.view.lkml"
 # include all the views
 explore: orders {
   view_label: "Orders"
-  view_name: orders
+  view_name: dt_view_switcher
   label: "Ecommerce Dataset"
   join: p2p {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${orders.order_purchase_date} = ${p2p.full_date_date} ;;
+    sql_on: ${dt_view_switcher.order_purchase_date} = ${p2p.full_date_date} ;;
   }
   join: dt_test {
     type: inner
     relationship: many_to_one
-    sql_on:  ${orders.current_period_dimension} = ${dt_test.current_period_dimension} ;;
+    sql_on:  ${dt_view_switcher.current_period_dimension} = ${dt_test.current_period_dimension} ;;
   }
 }
 
@@ -28,4 +28,3 @@ explore: users {
   view_name: users
   label: "Ecommerce Dataset - Users"
 }
-explore: dt_view_switcher {}
