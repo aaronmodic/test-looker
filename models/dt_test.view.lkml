@@ -27,12 +27,12 @@ view: dt_test {
         # }
 
         bind_filters: {
-          from_field: orders.dimension_selector
-          to_field: orders.dimension_selector
+          from_field: dt_view_switcher.dimension_selector
+          to_field: dt_view_switcher.dimension_selector
         }
         bind_filters: {
-          from_field: orders.measure_selector
-          to_field: orders.measure_selector
+          from_field: dt_view_switcher.measure_selector
+          to_field: dt_view_switcher.measure_selector
         }
       }
     }
