@@ -12,7 +12,7 @@ view: orders {
   dimension: customer_city {
     type: string
     sql: ${TABLE}.CUSTOMER_CITY ;;
-    tags: ["market: "]
+    tags: ["submarket2: "]
   }
 
   dimension: customer_id {
@@ -25,7 +25,7 @@ view: orders {
   dimension: customer_state {
     type: string
     sql: ${TABLE}.CUSTOMER_STATE ;;
-    tags: ["dimensions:Sender Dimension","filter:Sender Filter"]
+    tags: ["dimensions:Sender Dimension","filter:Sender Filter", "market: "]
   }
 
   dimension: customer_zip_code_prefix {
@@ -102,7 +102,7 @@ view: orders {
   dimension: order_status {
     type: string
     sql: ${TABLE}.ORDER_STATUS ;;
-    tags:["dimensions:Sender Dimension","filter:Sender Filter"]
+    tags:["dimensions:Sender Dimension","filter:Sender Filter, submarket1: "]
   }
 
 # use translated name in product_category_name_translation view
