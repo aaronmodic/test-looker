@@ -4,6 +4,7 @@ include: "/models/orders.view"
 include: "/models/users.view"
 include: "/models/p2p.view"
 include: "/models/dt_test.view.lkml"
+include: "/models/dt_view_switcher.view.lkml"
 # include: "/_period_comparison.view.lkml"
 # include all the views
 explore: orders {
@@ -27,3 +28,4 @@ explore: users {
   view_name: users
   label: "Ecommerce Dataset - Users"
 }
+explore: dt_view_switcher {}
