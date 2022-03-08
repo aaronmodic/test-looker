@@ -62,8 +62,8 @@ application: framework_app_vibes {
 
 application: framework_app_paypal {
   label: "Paypal Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "paypal_bundle.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "paypal_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -120,6 +120,12 @@ application: manhattan_framework_app {
     oauth2_urls: ["https://*.looker.com"]
     external_api_urls: ["https://*.looker.com"]
   }
+}
+
+visualization: {
+  id: "html_freeform"
+  label: "Html Freeform"
+  url: "https://localhost:8443/html_freeform.js"
 }
 
 # # Use local_dependency: To enable referencing of another project
