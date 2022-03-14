@@ -125,7 +125,8 @@ application: manhattan_framework_app {
 visualization: {
   id: "html_freeform"
   label: "Html Freeform"
-  url: "https://localhost:8443/html_freeform.js"
+  #url: "https://localhost:8443/html_freeform.js"
+  file: "html_freeform.js"
 }
 
 # # Use local_dependency: To enable referencing of another project
