@@ -26,6 +26,7 @@ view: orders {
     type: string
     sql: ${TABLE}.CUSTOMER_STATE ;;
     tags: ["dimensions:Sender Dimension","filter:Sender Filter", "market: "]
+    html: <a href="http://google.com">{{value}}</a> ;;
   }
 
   dimension: customer_zip_code_prefix {
