@@ -41,8 +41,8 @@ application: framework_app_cisco {
 
 application: framework_app_vibes {
   label: "Vibes Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "vibes_bundle.js"
+  url: "http://localhost:8080/bundle.js"
+  #file: "vibes_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -54,7 +54,7 @@ application: framework_app_vibes {
       , "search_folders", "run_inline_query", "me"
       , "lookml_model_explore", "all_lookml_models",
       "search_dashboard_elements", "run_query", "dashboard","all_user_attributes",
-      "folder_looks","dashboard_dashboard_elements","look","folder_dashboards", "create_query", "all_roles"]
+      "folder_looks","dashboard_dashboard_elements","look","folder_dashboards", "create_query", "all_roles","create_dashboard_render_task", "render_task","render_task_results"]
     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
   }
