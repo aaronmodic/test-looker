@@ -122,11 +122,54 @@ application: manhattan_framework_app {
   }
 }
 
+application: bytecode_firebolt-extension {
+  label: "Bytecode - Firebolt Extension"
+  #url: "http://localhost:8080/bundle.js"
+  file: "fire_bundle.js"
+  entitlements: {
+    local_storage: yes
+    navigation: yes
+    new_window: yes
+    use_form_submit: yes
+    use_embeds: yes
+    use_iframes: yes
+    core_api_methods: ["all_connections","all_projects","all_groups"
+      , "all_users", "all_folders"
+      , "search_folders", "run_inline_query", "me"
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+      ,"folder_dashboards","user","all_roles"]
+    oauth2_urls: ["https://*.looker.com"]
+    external_api_urls: ["https://*.looker.com"]
+  }
+}
+
 visualization: {
   id: "html_freeform"
   label: "Html Freeform"
   #url: "https://localhost:8443/html_freeform.js"
   file: "html_freeform.js"
+}
+
+application: viz_workflow_framework {
+  label: "Toyota Viz Workflow"
+  url: "http://localhost:8080/bundle.js"
+  #file: "/manhattan/ma-bundle.js"
+  entitlements: {
+    local_storage: yes
+    navigation: yes
+    new_window: yes
+    use_form_submit: yes
+    use_embeds: yes
+    use_iframes: yes
+    core_api_methods: ["all_connections","all_projects","all_groups"
+      , "all_users", "all_folders"
+      , "search_folders", "run_inline_query", "me"
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+      ,"folder_dashboards","user","all_roles", "copy_dashboard", "create_dashboard_element","update_dashboard_element", "create_query", "dashboard_layout_dashboard_layout_components","update_dashboard_layout_component","render_task_results"]
+    oauth2_urls: ["https://*.looker.com"]
+    external_api_urls: ["https://*.looker.com"]
+    new_window_external_urls: ["https://*.looker.com","blob:*"]
+  }
 }
 
 # # Use local_dependency: To enable referencing of another project
