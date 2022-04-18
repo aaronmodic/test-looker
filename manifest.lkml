@@ -150,6 +150,12 @@ visualization: {
   file: "html_freeform.js"
 }
 
+visualization: {
+  id: "hello world"
+  label: "Hello World Viz"
+  url: "https://raw.githubusercontent.com/whitlock972/Custom_Visualizations/main/hello_world.js"
+}
+
 application: viz_workflow_framework {
   label: "Toyota Viz Workflow"
   url: "http://localhost:8080/bundle.js"
