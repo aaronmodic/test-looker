@@ -153,7 +153,7 @@ visualization: {
 visualization: {
   id: "hello world"
   label: "Hello World Viz"
-  url: "https://raw.githubusercontent.com/whitlock972/Custom_Visualizations/main/hello_world.js"
+  url: "https://github.com/whitlock972/Custom_Visualizations/blob/main/hello_world.js"
 }
 
 application: viz_workflow_framework {
