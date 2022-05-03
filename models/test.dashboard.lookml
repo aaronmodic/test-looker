@@ -1,5 +1,5 @@
 - dashboard: test
-  title: test
+  title: made_a_change
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:
