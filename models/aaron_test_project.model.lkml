@@ -5,6 +5,7 @@ include: "/models/users.view"
 include: "/models/p2p.view"
 include: "/models/dt_test.view.lkml"
 include: "/models/dt_view_switcher.view.lkml"
+include: "/models/test.dashboard.lookml"
 # include: "/_period_comparison.view.lkml"
 # include all the views
 explore: orders {
