@@ -19,6 +19,7 @@ application: framework_app_test {
   }
 }
 
+constant: Test {value:"hey"}
 application: framework_app_cisco {
   label: "Cisco Framework"
   #url: "http://localhost:8080/bundle.js"
@@ -41,8 +42,8 @@ application: framework_app_cisco {
 
 application: framework_app_vibes {
   label: "Vibes Framework"
-  url: "http://localhost:8080/bundle.js"
-  #file: "vibes_bundle.js"
+  #url: "http://localhost:8080/bundle.js"
+  file: "vibes_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -62,8 +63,8 @@ application: framework_app_vibes {
 
 application: framework_app_paypal {
   label: "Paypal Framework"
-  url: "http://localhost:8080/bundle.js"
-  #file: "paypal_bundle.js"
+  #url: "http://localhost:8080/bundle.js"
+  file: "paypal_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -126,6 +127,28 @@ application: bytecode_firebolt-extension {
   label: "Bytecode - Firebolt Extension"
   #url: "http://localhost:8080/bundle.js"
   file: "fire_bundle.js"
+  entitlements: {
+    local_storage: yes
+    navigation: yes
+    new_window: yes
+    use_form_submit: yes
+    use_embeds: yes
+    use_iframes: yes
+    core_api_methods: ["all_connections","all_projects","all_groups"
+      , "all_users", "all_folders"
+      , "search_folders", "run_inline_query", "me"
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+      ,"folder_dashboards","user","all_roles"]
+    oauth2_urls: ["https://*.looker.com"]
+    external_api_urls: ["https://*.looker.com"]
+  }
+}
+
+
+application: qventus_extension_app {
+  label: "Qventus Extension"
+  url: "http://localhost:8080/bundle.js"
+  #file: "fire_bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
