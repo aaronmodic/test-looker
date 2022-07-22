@@ -11,6 +11,11 @@
             "value":"FXMkRqfALgDuRN5JGXeUqr"
           },
           {
+            "domain":"Test",
+            "displayName":"TestTestDomain",
+            "value":"FXMkRqfALgDuRN5JGXeUqr"
+          },
+          {
             "domain":"*",
             "displayName":"Test1",
             "value":"FXMkRqfALgDuRN5JGXeUqr"
