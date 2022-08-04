@@ -148,7 +148,7 @@ application: bytecode_firebolt-extension {
 application: qventus_extension_app {
   label: "Qventus Extension"
   url: "http://localhost:8080/bundle.js"
-  #file: "fire_bundle.js"
+  #file: "bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -162,7 +162,7 @@ application: qventus_extension_app {
       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
       ,"folder_dashboards","user","all_roles","search_dashboards","project"]
     oauth2_urls: ["https://*.looker.com"]
-    external_api_urls: ["https://*.looker.com","https://my-json-server.typicode.com/aaronmodic/jsonplaceholder/slugs", "https://api.github.com/*"]
+    external_api_urls: ["https://*.looker.com", "https://api.github.com/*"]
   }
 }
 
