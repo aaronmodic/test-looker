@@ -47,6 +47,11 @@
         "tab":
         [
           {
+            "domain":"bytecodeef",
+            "displayName":"Test4",
+            "value":""
+          },
+          {
             "domain":"*",
             "displayName":"Test4",
             "value":"ST3ubtHKIgUqyVUJJchhQr"
