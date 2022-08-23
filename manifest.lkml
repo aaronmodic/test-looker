@@ -176,8 +176,8 @@ visualization: {
 visualization: {
   id: "hello world"
   label: "Hello World Viz"
-  #url: "https://github.com/whitlock972/Custom_Visualizations/blob/main/hello_world.js"
-  url: "https://localhost:8443/hello_world.js"
+  #url: "https://localhost:8443/hello_world.js"
+  file: "hello_world.js"
 }
 
 application: viz_workflow_framework {
