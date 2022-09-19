@@ -148,7 +148,7 @@ application: bytecode_firebolt-extension {
 application: qventus_extension_app {
   label: "Qventus Extension"
   #url: "http://localhost:8080/bundle.js"
-  file: "qventus_tab.js"
+  file: "bundle.js"
   entitlements: {
     local_storage: yes
     navigation: yes
@@ -160,9 +160,30 @@ application: qventus_extension_app {
       , "all_users", "all_folders"
       , "search_folders", "run_inline_query", "me"
       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
-      ,"folder_dashboards","user","all_roles","search_dashboards","project"]
+      ,"folder_dashboards","user","all_roles","search_dashboards","project","user_attribute"]
     oauth2_urls: ["https://*.looker.com"]
     external_api_urls: ["https://*.looker.com", "https://api.github.com/*"]
+  }
+}
+
+application: nabc_framework_app {
+  label: "NABC App"
+  url: "http://localhost:8080/bundle.js"
+  #file: "/manhattan/ma-bundle.js"
+  entitlements: {
+    local_storage: yes
+    navigation: yes
+    new_window: yes
+    use_form_submit: yes
+    use_embeds: yes
+    use_iframes: yes
+    core_api_methods: ["all_connections","all_projects","all_groups"
+      , "all_users", "all_folders"
+      , "search_folders", "run_inline_query", "me"
+      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+      ,"folder_dashboards","user","all_roles"]
+    oauth2_urls: ["https://*.looker.com"]
+    external_api_urls: ["https://*.looker.com"]
   }
 }
 
