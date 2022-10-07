@@ -168,7 +168,7 @@ application: qventus_extension_app {
 
 application: nabc_framework_app {
   label: "NABC App"
-  url: "http://localhost:8080/bundle.js"
+  url: "https://localhost:8080/bundle.js"
   #file: "/manhattan/ma-bundle.js"
   entitlements: {
     local_storage: yes
