@@ -147,7 +147,7 @@ application: bytecode_firebolt-extension {
 
 application: qventus_extension_app {
   label: "Qventus Extension"
-  url: "http://localhost:8888/bundle.js"
+  url: "http://localhost:8080/bundle.js"
   # file: "bundle.js"
   entitlements: {
     local_storage: yes
