@@ -145,7 +145,7 @@ application: bytecode_firebolt-extension {
 }
 
 
-application: qventus_extension_app {
+application: example {
   label: "Qventus Extension"
   # url: "https://localhost:8080/bundle.js"
   file: "qventus_bundle.js"
