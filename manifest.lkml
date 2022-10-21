@@ -150,14 +150,10 @@ application: example {
   url: "https://localhost:8080/bundle.js"
   # file: "qventus_bundle.js"
   entitlements: {
-    local_storage: no
-    navigation: no
-    new_window: no
-    use_form_submit: no
-    use_embeds: no
+    navigation: yes
+    new_window: yes
+    use_embeds: yes
     use_iframes: yes
-    core_api_methods: []
-    oauth2_urls: []
     external_api_urls: ["https://api.github.com/*"]
   }
 }
