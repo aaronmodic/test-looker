@@ -155,7 +155,7 @@ application: example {
     new_window: no
     use_form_submit: no
     use_embeds: no
-    use_iframes: no
+    use_iframes: yes
     core_api_methods: []
     oauth2_urls: []
     external_api_urls: ["https://api.github.com/*"]
