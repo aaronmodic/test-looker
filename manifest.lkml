@@ -187,6 +187,13 @@ visualization: {
 }
 
 visualization: {
+  id: "unique-id"
+  label: "Visualization Label"
+  #url: "https://localhost:8080/bundle.js"
+  file: "hello_world.js"
+}
+
+visualization: {
   id: "hello world"
   label: "Hello World Viz"
   #url: "https://localhost:8443/hello_world.js"
