@@ -147,8 +147,8 @@ application: bytecode_firebolt-extension {
 
 application: example {
   label: "Qventus Tabbed Dashboards"
-  # url: "https://localhost:8080/bundle.js"
-  file: "qventus_bundle.js"
+  url: "https://localhost:8080/bundle.js"
+  # file: "qventus_bundle.js"
   entitlements: {
     navigation: yes
     new_window: yes
