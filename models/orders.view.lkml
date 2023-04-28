@@ -24,7 +24,8 @@ view: orders {
 
   dimension: customer_state {
     type: string
-    sql: ${TABLE}.CUSTOMER_STATE ;;
+    sql: ${TABLE}.CUSTOMER_STATE;;
+    html: <a target="_blank" href="https://google.com">{{value}}</a> ;;
     tags: ["dimensions:Sender Dimension","filter:Sender Filter", "market: "]
   }
 

@@ -1,0 +1,85 @@
+{
+  "products":[
+    {
+      "id":1,
+      "name":"Structure and Interpretation of Computer Programs",
+      "quantity":998001,
+      "unit_price_cents":961,
+      "created_at":"10/11/21",
+      "updated_at":"02/15/22",
+      "part_number":""
+    },
+    {
+      "id":2,
+      "name":"Godel, Escher, Bach",
+      "quantity":77777,
+      "unit_price_cents":777,
+      "created_at":"10/11/21",
+      "updated_at":"10/11/21",
+      "part_number":""
+    },
+    {
+      "id":3,
+      "name":"The Seasoned Schemer",
+      "quantity":12563,
+      "unit_price_cents":1480,
+      "created_at":"10/11/21",
+      "updated_at":"02/16/22",
+      "part_number":""
+    },
+    {
+      "id":4,
+      "name":"Slaughterhouse Five",
+      "quantity":5000,
+      "unit_price_cents":500,
+      "created_at":"10/11/21",
+      "updated_at":"10/11/21",
+      "part_number":""
+    },
+    {
+      "id":5,
+      "name":"The Little Schemer",
+      "quantity":8395,
+      "unit_price_cents":952,
+      "created_at":"10/11/21",
+      "updated_at":"10/11/21",
+      "part_number":""
+    },
+    {
+      "id":6,
+      "name":"The C Programming Language",
+      "quantity":15822,
+      "unit_price_cents":1450,
+      "created_at":"10/11/21",
+      "updated_at":"10/11/21",
+      "part_number":""
+    },
+    {
+      "id":7,
+      "name":"Introduction to Algorithms",
+      "quantity":65536,
+      "unit_price_cents":3000,
+      "created_at":"10/11/21",
+      "updated_at":"10/11/21",
+      "part_number":""
+    },
+    {
+      "id":8,
+      "name":"The Dream Machine",
+      "quantity":0,
+      "unit_price_cents":9400,
+      "created_at":"10/11/21",
+      "updated_at":"10/11/21",
+      "part_number":""
+    },
+    {
+      "id":9,
+      "name":"Working Effectively With Legacy Code",
+      "quantity":6252,
+      "unit_price_cents":5708,
+      "created_at":"10/11/21",
+      "updated_at":"10/11/21",
+      "part_number":""
+    }
+  ]
+}

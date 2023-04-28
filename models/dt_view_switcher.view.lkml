@@ -118,7 +118,11 @@ view: dt_view_switcher {
     sql: ${TABLE}.ORDER_STATUS ;;
     tags:["dimensions:Sender Dimension","filter:Sender Filter", "submarket1: ", "Executive:submarket1Filter", "ActiveCohort:locationFilter", "ActiveCohort:inputBarMetric", "TwoMonthRetention:sidebarFilter"]
   }
-
+  dimension: order_status_delivered {
+    type: yesno
+    sql: ${order_status} = 'delivered' ;;
+    tags:["dimensions:Sender Dimension","filter:Sender Filter", "submarket1: "]
+  }
 # use translated name in product_category_name_translation view
   dimension: product_category_name {
     type: string
