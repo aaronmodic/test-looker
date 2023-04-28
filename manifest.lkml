@@ -1,126 +1,126 @@
 project_name: "aaron_test"
 
-application: framework_app_test {
-  label: "Framework App Test"
-  url: "http://localhost:8080/bundle.js"
-  #file: "bundle.js"
-  entitlements: {
-    local_storage: yes
-    navigation: yes
-    new_window: yes
-    use_form_submit: yes
-    use_embeds: yes
-    core_api_methods: ["all_connections","all_projects","all_groups"
-      , "all_users", "all_folders"
-      , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "create_query", "all_roles"]
-    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
-    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
-  }
-}
+# application: framework_app_test {
+#   label: "Framework App Test"
+#   url: "http://localhost:8080/bundle.js"
+#   #file: "bundle.js"
+#   entitlements: {
+#     local_storage: yes
+#     navigation: yes
+#     new_window: yes
+#     use_form_submit: yes
+#     use_embeds: yes
+#     core_api_methods: ["all_connections","all_projects","all_groups"
+#       , "all_users", "all_folders"
+#       , "search_folders", "run_inline_query", "me"
+#       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "create_query", "all_roles"]
+#     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
+#     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
+#   }
+# }
 
-application: framework_app_cisco {
-  label: "Cisco Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "cisco_bundle.js"
-  #url: "https://looker-bundle-bucket.s3.amazonaws.com/bundle.js"
-  entitlements: {
-    local_storage: yes
-    navigation: yes
-    new_window: yes
-    use_form_submit: yes
-    use_embeds: yes
-    core_api_methods: ["all_connections","all_projects","all_groups"
-      , "all_users", "all_folders"
-      , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "folder_looks","dashboard_dashboard_elements","look","folder_dashboards"]
-    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://looker.*.com"]
-    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/","https://looker.*.com"]
-  }
-}
+# application: framework_app_cisco {
+#   label: "Cisco Framework"
+#   #url: "http://localhost:8080/bundle.js"
+#   file: "cisco_bundle.js"
+#   #url: "https://looker-bundle-bucket.s3.amazonaws.com/bundle.js"
+#   entitlements: {
+#     local_storage: yes
+#     navigation: yes
+#     new_window: yes
+#     use_form_submit: yes
+#     use_embeds: yes
+#     core_api_methods: ["all_connections","all_projects","all_groups"
+#       , "all_users", "all_folders"
+#       , "search_folders", "run_inline_query", "me"
+#       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes", "folder_looks","dashboard_dashboard_elements","look","folder_dashboards"]
+#     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://looker.*.com"]
+#     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/","https://looker.*.com"]
+#   }
+# }
 
-application: framework_app_vibes {
-  label: "Vibes Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "vibes_bundle.js"
-  entitlements: {
-    local_storage: yes
-    navigation: yes
-    new_window: yes
-    use_form_submit: yes
-    use_embeds: yes
-    core_api_methods: ["all_connections","all_projects","all_groups"
-      , "all_users", "all_folders"
-      , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models",
-      "search_dashboard_elements", "run_query", "dashboard","all_user_attributes",
-      "folder_looks","dashboard_dashboard_elements","look","folder_dashboards", "create_query", "all_roles"]
-    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
-    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
-  }
-}
+# application: framework_app_vibes {
+#   label: "Vibes Framework"
+#   #url: "http://localhost:8080/bundle.js"
+#   file: "vibes_bundle.js"
+#   entitlements: {
+#     local_storage: yes
+#     navigation: yes
+#     new_window: yes
+#     use_form_submit: yes
+#     use_embeds: yes
+#     core_api_methods: ["all_connections","all_projects","all_groups"
+#       , "all_users", "all_folders"
+#       , "search_folders", "run_inline_query", "me"
+#       , "lookml_model_explore", "all_lookml_models",
+#       "search_dashboard_elements", "run_query", "dashboard","all_user_attributes",
+#       "folder_looks","dashboard_dashboard_elements","look","folder_dashboards", "create_query", "all_roles"]
+#     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
+#     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
+#   }
+# }
 
-application: framework_app_paypal {
-  label: "Paypal Framework"
-  #url: "http://localhost:8080/bundle.js"
-  file: "paypal_bundle.js"
-  entitlements: {
-    local_storage: yes
-    navigation: yes
-    new_window: yes
-    use_form_submit: yes
-    use_iframes:  yes
-    use_embeds: yes
-    core_api_methods: ["all_connections","all_projects","all_groups"
-      , "all_users", "all_folders"
-      , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes"
-      , "create_query", "all_roles"]
-    oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
-    external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
-  }
-}
+# application: framework_app_paypal {
+#   label: "Paypal Framework"
+#   url: "http://localhost:8080/bundle.js"
+#   #file: "paypal_bundle.js"
+#   entitlements: {
+#     local_storage: yes
+#     navigation: yes
+#     new_window: yes
+#     use_form_submit: yes
+#     use_iframes:  yes
+#     use_embeds: yes
+#     core_api_methods: ["all_connections","all_projects","all_groups"
+#       , "all_users", "all_folders"
+#       , "search_folders", "run_inline_query", "me"
+#       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes"
+#       , "create_query", "all_roles", "query_for_slug"]
+#     oauth2_urls: ["https://*.looker.com", "https://*.bytecode.io"]
+#     external_api_urls: ["https://*.looker.com", "https://*.bytecode.io", "https://*.amazonaws.com/"]
+#   }
+# }
 
-application: manhattan_admin_app {
-  label: "Manhattan - Admin App"
-  #url: "http://localhost:8080/bundle.js"
-  file: "/manhattan/admin-bundle.js"
-  entitlements: {
-    local_storage: yes
-    navigation: yes
-    new_window: yes
-    use_form_submit: yes
-    use_embeds: yes
-    core_api_methods: ["all_connections","all_projects","all_groups"
-      , "all_users", "all_folders"
-      , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
-      ,"login","logout","all_roles"]
-    oauth2_urls: ["https://*.looker.com"]
-    external_api_urls: ["https://*.looker.com"]
-  }
-}
+# application: manhattan_admin_app {
+#   label: "Manhattan - Admin App"
+#   #url: "http://localhost:8080/bundle.js"
+#   file: "/manhattan/admin-bundle.js"
+#   entitlements: {
+#     local_storage: yes
+#     navigation: yes
+#     new_window: yes
+#     use_form_submit: yes
+#     use_embeds: yes
+#     core_api_methods: ["all_connections","all_projects","all_groups"
+#       , "all_users", "all_folders"
+#       , "search_folders", "run_inline_query", "me"
+#       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+#       ,"login","logout","all_roles"]
+#     oauth2_urls: ["https://*.looker.com"]
+#     external_api_urls: ["https://*.looker.com"]
+#   }
+# }
 
-application: manhattan_framework_app {
-  label: "Manhattan - App"
-  #url: "http://localhost:8080/bundle.js"
-  file: "/manhattan/ma-bundle.js"
-  entitlements: {
-    local_storage: yes
-    navigation: yes
-    new_window: yes
-    use_form_submit: yes
-    use_embeds: yes
-    use_iframes: yes
-    core_api_methods: ["all_connections","all_projects","all_groups"
-      , "all_users", "all_folders"
-      , "search_folders", "run_inline_query", "me"
-      , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
-      ,"folder_dashboards","user","all_roles"]
-    oauth2_urls: ["https://*.looker.com"]
-    external_api_urls: ["https://*.looker.com"]
-  }
-}
+# application: manhattan_framework_app {
+#   label: "Manhattan - App"
+#   #url: "http://localhost:8080/bundle.js"
+#   file: "/manhattan/ma-bundle.js"
+#   entitlements: {
+#     local_storage: yes
+#     navigation: yes
+#     new_window: yes
+#     use_form_submit: yes
+#     use_embeds: yes
+#     use_iframes: yes
+#     core_api_methods: ["all_connections","all_projects","all_groups"
+#       , "all_users", "all_folders"
+#       , "search_folders", "run_inline_query", "me"
+#       , "lookml_model_explore", "all_lookml_models", "search_dashboard_elements", "run_query", "dashboard","all_user_attributes","create_sso_embed_url"
+#       ,"folder_dashboards","user","all_roles"]
+#     oauth2_urls: ["https://*.looker.com"]
+#     external_api_urls: ["https://*.looker.com"]
+#   }
+# }
 
 # # Use local_dependency: To enable referencing of another project
 # # on this instance with include: statements

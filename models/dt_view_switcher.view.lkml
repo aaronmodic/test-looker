@@ -18,31 +18,33 @@ view: dt_view_switcher {
       label: "orders1"
       value: "orders1"
     }
+    tags: ["Executive:tablenameDimension"]
     # add as many allowed_values as you have tables
   }
 
   dimension: customer_city {
     type: string
     sql: ${TABLE}.CUSTOMER_CITY ;;
-    tags: ["submarket2: "]
+    tags: ["Executive:submarket2Filter", "ActiveCohort:primaryFlowFilter", "TwoMonthRetention:sidebarFilter"]
   }
 
   dimension: customer_id {
     type: string
     # hidden: yes
     sql: ${TABLE}.CUSTOMER_ID ;;
-    tags: ["dimensions: "]
+    tags: ["dimensions: ", "dimensions:Executive Subsection", "ActiveCohort:accountTypeFilter", "TwoMonthRetention:sidebarFilter"]
   }
 
   dimension: customer_state {
     type: string
     sql: ${TABLE}.CUSTOMER_STATE ;;
-    tags: ["dimensions:Sender Dimension","filter:Sender Filter", "market: "]
+    tags: ["dimensions:Sender Dimension","filter:Sender Filter", "Executive:marketFilter", "ActiveCohort:locationFilter", "TwoMonthRetention:sidebarFilter"]
   }
 
   dimension: customer_zip_code_prefix {
     type: number
     sql: ${TABLE}.CUSTOMER_ZIP_CODE_PREFIX ;;
+    tags: ["dimensions:Executive Subsection", "ActiveCohort:locationFilter"]
   }
 
   dimension_group: order_purchase {
@@ -57,7 +59,7 @@ view: dt_view_switcher {
       year
     ]
     sql: ${TABLE}.ORDER_PURCHASE_TIMESTAMP ;;
-    tags: ["timeframes:Timeframe"]
+    tags: ["timeframes:Timeframe", "Executive:timeframeFilter", "ActiveCohort:activeMonthFilter"]
   }
 
 
@@ -114,7 +116,7 @@ view: dt_view_switcher {
   dimension: order_status {
     type: string
     sql: ${TABLE}.ORDER_STATUS ;;
-    tags:["dimensions:Sender Dimension","filter:Sender Filter", "submarket1: "]
+    tags:["dimensions:Sender Dimension","filter:Sender Filter", "submarket1: ", "Executive:submarket1Filter", "ActiveCohort:locationFilter", "ActiveCohort:inputBarMetric", "TwoMonthRetention:sidebarFilter"]
   }
 
 # use translated name in product_category_name_translation view
@@ -122,6 +124,7 @@ view: dt_view_switcher {
     type: string
     sql: ${TABLE}.PRODUCT_CATEGORY_NAME ;;
     hidden: yes
+    tags: ["ActiveCohort:locationFilter"]
   }
 
   dimension: product_description_length {
@@ -169,6 +172,7 @@ view: dt_view_switcher {
   dimension: review_score {
     type: number
     sql: ${TABLE}.REVIEW_SCORE ;;
+    tags: ["dimensions:Executive Subsection", "Executive:graphDimension", "ActiveCohort:consumerMerchantFilter"]
   }
   # parameter: dimension_selector {
   #   type: string
@@ -192,6 +196,7 @@ view: dt_view_switcher {
   measure: count_orders {
     type: count_distinct
     sql: ${order_id} ;;
+    tags: ["measures:Executive Subsection", "Executive:topGraphMeasure"]
     link: {
       label: "Link 1"
       url: "/dashboards-next/306"
@@ -205,7 +210,7 @@ view: dt_view_switcher {
   measure: count_customers {
     type: count_distinct
     sql: ${customer_id} ;;
-    tags: ["measures:measure"]
+    tags: ["measures:measure", "measures:Executive Subsection", "Executive:topGraphMeasure", "Executive:bottomGraphMeasure"]
   }
 
   dimension_group: auditdate {
@@ -221,12 +226,13 @@ view: dt_view_switcher {
   measure: count_order_items_qty {
     type: sum
     sql: ${order_items_qty};;
+    tags: ["measures:measure", "measures:Executive Subsection", "Executive:topGraphMeasure"]
   }
 
   measure: sum_order_products_value {
     type: sum
     sql: ${order_products_value};;
-    tags: ["measures:measure"]
+    tags: ["measures:measure", "measures:Executive Subsection", "Executive:bottomGraphMeasure"]
   }
   # parameter: measure_selector {
   #   type: unquoted
